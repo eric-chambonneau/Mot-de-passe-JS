@@ -6,3 +6,102 @@
     padding: 0;
     font-family: Rubik Iso, sans-serif;
 }
+
+body {
+    background-color: #32eb1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/*stylisé le contenu pour les entrées*/
+
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 350px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+    outline: 0;
+}
+
+/*personnaliser le bouton d'envoi*/
+
+input[type="submit"] {
+    background-color: #32eb1a;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px;
+    width: 100%;
+}
+
+/*personnaliser le boite message*/
+
+.message {
+    display: flex;
+    flex-direction: column;
+    background-color: azure;
+    border-radius: 6px;
+    width: 350px;
+    color: black;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+    letter-spacing: 0.5px;
+    animation: 1s ease-in-out 0s 1 slideInFromLeft;
+}
+
+/*animation message*/
+
+@keyframes anim {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+}
+h3 {
+    font-size: 20px;
+    font-weight: 400;
+ }
+ .message p {
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 10px;
+    margin-bottom: 10px;
+ }
+
+ /*lorsque les exigences sont erronées*/
+
+ .invalid {
+   color: red;
+}
+
+.invalid::before {
+    position: relative;
+    left: -7px;
+    content: "✖";
+}
+
+    
+
+
+
