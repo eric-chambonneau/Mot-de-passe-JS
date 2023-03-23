@@ -101,6 +101,17 @@ h3 {
     content: "✖";
 }
 
+/*lorsque les exigences sont respectées*/
+
+.valid {
+    color: green;
+}
+.valid::before {
+    position: relative;
+    left: -7px;
+    content: "✓";
+}
+
     
 
 
